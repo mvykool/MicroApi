@@ -43,6 +43,7 @@ static async Task<IResult> CreateTodo(Todo todo, TodoDb db)
     return TypedResults.Created($"/todoitems/{todo.Id}", todo);
 }
 
+
 static async Task<IResult> UpdateTodo(int id, Todo inputTodo, TodoDb db)
 {
     var todo = await db.Todos.FindAsync(id);
